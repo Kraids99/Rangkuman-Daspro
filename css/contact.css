@@ -1,0 +1,73 @@
+body
+{
+    overflow-x: hidden;
+}
+fieldset{
+    border: 3px solid grey;
+    margin-top: -px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px #000;
+}
+legend{
+    margin-left: 20px;
+    padding: 10px;
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    border-radius: 10px;
+    background-color: darkorange;
+    letter-spacing: 3px;
+    font-family: 'Righteous', monospace;
+
+}
+
+.soci-contact{
+    display: flex;
+    flex-wrap: wrap;
+}
+.messenger{
+    width: 200px;
+    position: relative;
+    height: 40px;
+    margin: 10px;
+    background-color: #0084FF;
+    border-radius: 20px;
+}
+.messenger:hover{
+    filter: brightness(80%);
+}
+.messenger img{
+    padding: 5px;
+    margin-left: 3px;
+    width: 40px;
+    height: 40px;
+}
+.email{
+    width: 170px;
+    position: relative;
+    height: 40px;
+    margin-left: 50px;
+    margin-bottom: 20px;
+    background-color: #c8232c;
+    border-radius: 20px;
+}
+.email:hover{
+    filter: brightness(80%);
+}
+.email img{
+    padding: 5px;
+    margin-left: 3px;
+    width: 40px;
+    height: 40px;
+}
+.text{
+    position: absolute;
+    top: 50%;
+    right: 7px;
+    font-size: 16px;
+    font-weight: bold;
+    transform: translate(-0%, -50%);
+}
+a{
+    color: aliceblue;
+}

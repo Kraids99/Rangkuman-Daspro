@@ -1,0 +1,1121 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(230, 229, 225);
+  }
+  
+  /*
+      CSS for header and navbar
+  */
+  .header img {
+    width: 220px;
+    height: auto;
+  }
+  .navbar {
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #19202c;
+    width: 100%;
+    height: 70px;
+    z-index: 1;
+  }
+  .navbar a {
+    margin-left: 10px;
+    padding: 5px;
+    font-size: 20px;
+    color: #fff;
+    font-family: "Arial" monospace;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  .navbar a:hover {
+    padding: 10px;
+    font-weight: bold;
+    color: #FFEBD2;
+  }
+  
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  
+  .sticky + .banner-area {
+    padding-top: 60px;
+  }
+  #open {
+    visibility: hidden;
+  }
+  #close {
+    visibility: hidden;
+  }
+  #active {
+    color: #AF4F41;
+    font-size: 22px;
+    font-weight: bold;
+  }
+  
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  
+  .sticky + .banner-area {
+    padding-top: 60px;
+  }
+  
+  @media only screen and (max-width: 800px) {
+    #open {
+      visibility: visible;
+    }
+    #close {
+      visibility: visible;
+    }
+    .header img {
+      visibility: hidden;
+      width: 0px;
+      height: 0px;
+    }
+    .header {
+      background-color: rgb(0, 0, 0, 0.79);
+      color: white;
+    }
+    .navbar {
+      width: 0;
+      height: 100%;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.9);
+      overflow-x: hidden;
+      transition: 0.5s;
+    }
+  
+    .navbar-content {
+      position: relative;
+      top: 0px;
+      width: 100%;
+      text-align: center;
+      margin-top: 0px;
+    }
+  
+    .navbar a {
+      padding: 8px;
+      text-decoration: none;
+      text-align: left;
+      padding-left: 30px;
+      font-size: 26px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+    }
+  
+    .navbar a:hover,
+    .navbar a:focus {
+      color: #f1f1f1;
+    }
+  
+    .navbar .closebtn {
+      position: absolute;
+      top: 0px;
+      right: 5px;
+      font-size: 60px;
+    }
+  
+  }
+  
+  /*
+      CSS for banner area
+  */
+  
+  .banner-area {
+    position: relative;
+    transition: 2s;
+    background-image: url(../images/candra-banner.png);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    filter: brightness(80%);
+  }
+  
+  .bold-text{
+    font-family: "audiowide";
+    font-size: 50px;
+    color: #0a0808;
+    text-align: center;
+    margin-top: 20%;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  
+  }
+  
+  .title-image {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-image: url(../images/Candra.JPG);
+    background-size: cover;
+    background-position: center;
+    top: 50%;
+    left: 50%;
+    transition: 1s;
+    border: 4px;
+    border-style: ridge;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    filter: brightness(100%);
+  }
+  .title-image:hover {
+    filter: brightness(90%);
+    transition: 1s;
+    box-shadow: 5px 5px 5px #fbfbac;
+  }
+  .title-name {
+    left: 0;
+    position: absolute;
+    text-align: center;
+    top: 64%;
+    width: 100%;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+  }
+  
+  .text-jalan{
+    left: 0;
+    position: absolute;
+    text-align: center;
+    top: 5%;
+    width: 100%;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+  }
+  
+  /*
+    Cari data
+  */
+  /* Style untuk input search */
+  #searchInput {
+    width: 60%;
+    padding: 10px 40px 10px 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    outline: none;
+    box-sizing: border-box;
+    display: block;
+    margin: 0 auto;
+    position: relative; 
+    background-image: url('/images/search.png'); 
+    background-size: 20px 20px; /* Ukuran gambar */
+    background-position: left 7px center; /* Posisi gambar */
+    background-repeat: no-repeat;
+    text-indent: 20px;
+  }
+  
+  
+  /* Style untuk tombol pencarian */
+  .search-container button {
+    position: absolute; 
+    right: 10px; 
+    top: 50%; 
+    transform: translateY(-50%); 
+    background-color: transparent;
+    border: none;
+    cursor: pointer; 
+  }
+  
+  /* Style placeholder pada input search */
+  #searchInput::placeholder {
+    color: #999; 
+    font-style: italic; 
+  }
+  
+  .centered-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px; 
+    color: red; 
+    background-color: white;
+    padding: 20px; 
+    border: 2px solid red; 
+    border-radius: 10px; 
+    z-index: 1000; 
+    text-align: center; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+  }
+  
+  
+  /*
+      Password */
+  #pass-input {
+    width: 50%;
+    padding: 10px 40px 10px 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    outline: none;
+    box-sizing: border-box;
+    display: block;
+    margin: auto;
+    position: relative;
+    background-image: url('/images/Iconslogo/key.png'); 
+    background-size: 20px 20px; /* Ukuran gambar */
+    background-position: left 7px center; /* Posisi gambar */
+    background-repeat: no-repeat;
+    text-indent: 20px;
+  }
+  
+  .pass-input {
+    text-align: center; /* Posisi teks di tengah */
+  }
+  
+  .pass-input input[type="pass-pesan"],
+  .pass-input button {
+    display: block; 
+    margin: -10px auto; /* posisi */
+  }
+  
+  .pass-input button {
+    height: 30px; 
+    padding: 0 10px; 
+    background-color: #007bff; 
+    color: #fff; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+  }
+  
+  .pass-input button:hover {
+    background-color: #0056b3; 
+  }
+  
+  .pesan-salah {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px; 
+    color: red; 
+    background-color: white;
+    padding: 20px; 
+    border: 2px solid red; 
+    border-radius: 10px; 
+    z-index: 1000; 
+    text-align: center; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+  }
+  
+  @media only screen and (max-width: 800px){
+    #pass-input {
+      width: 70%;
+      padding: 10px 40px 10px 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 20px;
+      outline: none;
+      box-sizing: border-box;
+      display: block;
+      margin: auto;
+      position: relative;
+      background-image: url('/images/Iconslogo/key.png'); 
+      background-size: 20px 20px; /* Ukuran gambar */
+      background-position: left 7px center; /* Posisi gambar */
+      background-repeat: no-repeat;
+      text-indent: 20px;
+    }
+    
+    .pass-input {
+      text-align: center; /* Posisi teks di tengah */
+    }
+    
+    .pass-input input[type="pass-pesan"],
+    .pass-input button {
+      display: block; 
+      margin: -10px auto; /* posisi */
+    }
+  
+    .pesan-salah {
+      position: absolute;
+      top: 70%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 24px; 
+      color: red; 
+      background-color: white;
+      padding: 20px; 
+      border: 2px solid red; 
+      border-radius: 10px; 
+      z-index: 1000; 
+      text-align: center; 
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+    }
+  }
+  
+  
+  /*
+      Punya Alex
+  */
+  
+  .text-sampingV2 {
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .text-sampingV2 .gambar {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    margin-right: 20px;
+    max-width: 30%;
+    height: auto;
+  }
+  
+  .text-sampingV2 .caption {
+    font-size: 20px;
+    margin-top: 5px;
+    text-align: center;
+  }
+  
+  .text-sampingV2 .text{
+    padding-left: 20px;
+    max-width: 1000px;
+  }
+  
+  /*
+      Punya Alex
+  */
+  
+  .text-sampingV2 {
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .text-sampingV2 .img {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    margin-right: 20px;
+    max-width: 30%;
+    height: auto;
+  }
+  
+  .text-sampingV2 .caption {
+    font-size: 20px;
+    margin-top: 5px;
+    text-align: center;
+  }
+  
+  .text-sampingV2 .text{
+    padding-left: 20px;
+    max-width: 1000px;
+  }
+  /*
+      
+  */
+  
+  #iden-name {
+    font-size: 30px;
+    background-color: rgba(0, 0, 0, 0.3);
+    font-family: "audiowide";
+  }
+  .subtitle1,
+  .subtitle2 {
+    text-shadow: 0px 25px 3px #ede4e9;
+    font-size: 30px;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    font-family: "baloo tamma";
+  }
+  .title-name p {
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: 7px;
+  }
+  .subtitle1,
+  .subtitle2 {
+    letter-spacing: 0px;
+    text-transform: none;
+    opacity: 0.8;
+    font-weight: 100;
+  }
+  .subtitle1 {
+    animation: subtitle1;
+  }
+  .subtitle2 {
+    animation: subtitle2;
+  }
+  
+  .subtitle1,
+  .subtitle2 {
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    position: relative;
+    animation-duration: 16s;
+    animation-timing-function: steps(25, end);
+    animation-iteration-count: infinite;
+  }
+  
+  .subtitle1::after,
+  .subtitle2::after {
+    content: " | ";
+    position: absolute;
+    right: 0;
+    animation: caret infinite;
+    animation-duration: 0.8s;
+    animation-timing-function: steps(20, end);
+  }
+  
+  @keyframes subtitle2 {
+    0%,
+    50%,
+    100% {
+      width: 0;
+    }
+  
+    60%,
+    90% {
+      width: 12em;
+    }
+  }
+  
+  @keyframes subtitle1 {
+    0%,
+    50%,
+    100% {
+      width: 0;
+    }
+    10%,
+    40% {
+      width: 11em;
+    }
+  }
+  
+  @keyframes caret {
+    0%,
+    100% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+  
+  /*
+      CSS for blog, contact, testimonial area
+  */
+  .blog-area,
+  .contact-area {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    height: 90vh;
+  }
+  .testimonial-area {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+  }
+  
+  
+  /*
+      CSS for about area
+  */
+  
+  
+  
+  
+  
+  .about-area {
+    position: relative;
+    background: rgb(230, 229, 225);;
+    color: #000;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+  }
+  .about {
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px #000;
+    max-width: 1200px;
+  }
+  .text-about {
+    padding: 3%;
+    font-size: 24px;
+    font-family: "League Spartan";
+    line-height: 50px;
+  }
+  
+  .icons {
+    display: flex;
+    margin-right: 20%;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+  .icons a img {
+    width: 30px;
+    margin-left: 10px;
+  }
+  .icons a img:active {
+    transform: translateY(5px);
+  }
+  .rem-part .h2 {
+    font-size: 45px;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+  .rem-part .h3 {
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+  }
+  .left-part p {
+    width: 90%;
+    text-align: justify;
+  }
+  .abt-content {
+    display: flex;
+  }
+  .rem-part {
+    flex-basis: 60%;
+  }
+  .abt-content hr {
+    height: 4px;
+    background-color: #000;
+    width: 90%;
+    left: 0;
+  }
+  .img-part {
+    width: 40%;
+    height: auto;
+    display: flex;
+  }
+  .img {
+    width: 100%;
+    border-radius: 50px;
+    float: right;
+    background-image: url(../images/Candra.JPG);
+    background-size: cover;
+    background-position: center;
+  }
+  @media (max-width: 900px) {
+    .icons {
+      margin-right: 2%;
+    }
+    .img-part {
+      width: 0;
+      visibility: hidden;
+    }
+    .left-part p {
+      width: 100%;
+      text-align: justify;
+      font-size: 20px;
+    }
+    .abt-content {
+      display: flex;
+    }
+    .abt-content hr {
+      visibility: hidden;
+      width: 0px;
+    }
+    .rem-part {
+      flex-basis: 100%;
+    }
+  }
+  .abt-btn {
+    padding: 10px;
+  }
+  .abt-btn .button1 {
+    padding: 12px 40px;
+    border-radius: 0;
+    margin: 5px;
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: 600;
+    background-color: #f3971b;
+    border: 1px solid transparent;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    box-shadow: 0px 10px 10px #2e2e2e;
+  }
+  .abt-btn .button1:hover {
+    border: 1px solid #f3971b;
+    color: #f3971b;
+    background-color: transparent;
+  }
+  .abt-btn button:active {
+    box-shadow: none;
+    transform: translateY(10px);
+  }
+  .abt-btn .button2 {
+    padding: 12px 40px;
+    border-radius: 0;
+    margin: 5px;
+    font-size: 16px;
+    color: #f3971b;
+    background-color: transparent;
+    font-weight: 600;
+    border: 1px solid #f3971b;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    box-shadow: 0px 10px 10px #2e2e2e;
+  }
+  .abt-btn .button2:hover {
+    color: #ffffff;
+    background-color: #f3971b;
+  }
+  .abt-btn button:active {
+    box-shadow: none;
+    transform: translateY(10px);
+  }
+  
+  /*
+      CSS for service area
+  */
+  .service-area {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+  }
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .container .box {
+    position: relative;
+    width: 350px;
+    padding: 40px;
+    min-height: 600px;
+    background: #1a1a1a;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.9);
+    border-radius: 10px;
+    margin: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-align: center;
+    color: white;
+  }
+  .container .box::before {
+    content: "";
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.1);
+    z-index: 2;
+  }
+  .container .box .icon {
+    width: 80px;
+    height: 80px;
+    color: #fff;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    border-radius: 30%;
+    font-size: 40px;
+    font-weight: 700;
+    transition: 0.5s;
+  }
+  .container .box:nth-child(1) .icon {
+    box-shadow: 0 0 0 0 #bf065c;
+    background: #bf065c;
+    background-image: url(../images/Iconslogo/webdev.png);
+    background-position: center;
+    background-size: 70px;
+    background-repeat: no-repeat;
+  }
+  .container .box:nth-child(1):hover .icon {
+    box-shadow: 0 0 0 400px #bf065c;
+  }
+  
+  .container .box:nth-child(2) .icon {
+    box-shadow: 0 0 0 0 #18a11d;
+    background: #18a11d;
+    background-image: url(../images/Iconslogo/appdev.png);
+    background-position: center;
+    background-size: 70px;
+    background-repeat: no-repeat;
+  }
+  .container .box:nth-child(2):hover .icon {
+    box-shadow: 0 0 0 400px #18a11d;
+  }
+  
+  .container .box:nth-child(3) .icon {
+    box-shadow: 0 0 0 0 #218db5;
+    background: #218db5;
+    background-image: url(../images/Iconslogo/domhost.png);
+    background-position: center;
+    background-size: 70px;
+    background-repeat: no-repeat;
+  }
+  .container .box:nth-child(3):hover .icon {
+    box-shadow: 0 0 0 400px #218db5;
+  }
+  .container .box .content {
+    position: relative;
+    z-index: 1;
+    transition: 0.5s;
+  }
+  .container .box:hover .content {
+    color: #fff;
+  }
+  .container .box .content h3 {
+    font-size: 30px;
+    margin: 10px 0;
+    padding: 0;
+  }
+  .container .box .content p {
+    margin: 0;
+    text-align: justify;
+    padding: 0;
+  }
+  /*
+      CSS for who do i work with section
+  */
+  .corpwork-area {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 20px;
+    width: 100%;
+    height: 60vh;
+  }
+  
+  @media only screen and (max-width: 1000px) {
+    .corpwork-area {
+      width: 100%;
+      height: 70vh;
+    }
+  }
+  .text-part {
+    width: 65%;
+    height: 80%;
+    text-align: justify;
+    background-color: rgb(230, 229, 225);
+  }
+  
+  h1 {
+    margin-top: 10px;
+    font-size: 70px;
+    font-family: "Baloo Tamma";
+  }
+  
+  h5 {
+    font-size: 30px;
+    font-family: "Audiowide";
+  }
+  
+  
+  p {
+    font-size: 24px;
+    font-family: "League Spartan";
+    line-height: 50px;
+  }
+  .service-area,
+  .blog-area {
+    background: #fefefe;
+  }
+  .corpwork-area,
+  .contact-area,
+  .testimonial-area {
+    background: rgb(230, 229, 225);
+    color: #273248;
+  }
+  
+  /*
+      CSS for Testimonial
+  */
+  .testimonials {
+    text-align: center;
+  }
+  .testimonial p {
+    text-align: justify;
+  }
+  
+  .inner {
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px;
+  }
+  
+  .border {
+    width: 180px;
+    height: 5px;
+    background: #273248;
+    margin: 28px auto;
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .col {
+    flex: 50%; /* ubah ukuran pembagian tugas */
+    max-width: 60%;
+    box-sizing: border-box;
+    padding: 10px;
+  }
+  .testimonial {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0px 0px 10px rgb(0, 0, 0, 0.9);
+  }
+  .testi-content {
+    padding: 20px;
+    padding-top: 0;
+    color: #000;
+    font-family: "League Spartan";
+  }
+  .head-testi {
+    background-color: #19202c;
+    border-radius: 9px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    color: aliceblue;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    padding-top: 50px;
+    justify-content: center;
+    text-align: center;
+  }
+  .testimonial img {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border-style: solid;
+  }
+  .name-testi {
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .subname-testi {
+    font-size: 15px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    text-transform: capitalize;
+    margin: 20px;
+    margin-top: 5px;
+    margin-bottom: 50px;
+  }
+  .stars img {
+    width: 30px;
+    height: 30px;
+  }
+  
+  @media screen and (max-width: 1100px) {
+    .testimonial-area {
+      height: auto;
+    }
+  }
+  @media screen and (max-width: 960px) {
+    .col {
+      flex: 100%;
+      max-width: 80%;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .col {
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
+  
+  .divider {
+    height: 30px;
+    background-color: aliceblue;
+    width: 100%;
+  }
+  #goup a img {
+    width: 75px;
+    height: 75px;
+    position: fixed;
+    bottom: 90px;
+    right: 10px;
+  }
+  
+  .hide {
+    opacity: 0;
+    left: -100%;
+  }
+  .show {
+    opacity: 1;
+    left: 0;
+  }
+  
+  /*
+      CSS for contact area
+  */
+  .cont-form {
+    width: 80%;
+  }
+  
+  .cont-form #name {
+    background: white;
+    border-radius: 5px;
+    width: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+    border: 0px;
+    padding: 10px;
+    margin-left: 50px;
+    margin-top: 5%;
+    font-size: 20px;
+    color: #273248;
+  }
+  
+  .cont-form #email {
+    background: white;
+    border-radius: 5px;
+    width: 45%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+    border: 0px;
+    padding: 10px;
+    margin-left: 50px;
+    margin-top: 3%;
+    font-size: 20px;
+    float: left;
+    color: #273248;
+  }
+  .cont-form #subject {
+    background: white;
+    right: 0px;
+    border-radius: 5px;
+    width: 40%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+    border: 0px;
+    padding: 10px;
+    margin-left: 50px;
+    margin-top: 3%;
+    margin-right: -50px;
+    font-size: 20px;
+    float: right;
+    color:#273248;
+  }
+  .cont-form #phone {
+    background: white;
+    border-radius: 5px;
+    width: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+    border: 0px;
+    padding: 10px;
+    margin-left: 50px;
+    margin-top: 3%;
+    font-size: 20px;
+    color: #273248;
+  }
+  .cont-form #message {
+    background: white;
+    border-radius: 5px;
+    border: 0px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+    padding: 10px;
+    margin-left: 50px;
+    margin-top: 3%;
+    font-size: 20px;
+    color: #273248;
+  }
+  
+  textarea {
+    background:#101010;
+    border-radius: 5px;
+    width: 100%;
+    border: 0px;
+    padding: 10px;
+    margin: 2%;
+    height: 20vh;
+    font-size: 20px;
+    color: #c6cfc8;
+    resize: none;
+  }
+  #btn-submit {
+    margin: 2%;
+    width: 100px;
+    background: #0056b3;
+    border: 0px;
+    border-radius: 20px;
+    padding: 10px;
+    color: white;
+    margin-left: 50px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  /Copyright information style/
+  .copyright {
+    background: rgb(20, 20, 20);
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 70px;
+    color: white;
+  }
+  .copyright a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .copyright p {
+    font-size: 18px;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }

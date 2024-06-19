@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home</title>
+    <meta charset="utf-8" />
+    <meta lang="en" />
+    <meta name="author" content="Candra D Wijaya" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="images/Main_Logo.png" />
+    <!--The below code is for importing google web fonts in html-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Audiowide|Baloo+Tamma|Kelly+Slab|Neucha|Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <link href="css/style.css" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/workslider.css" type="text/css" />
+    <script src="js/formValidate.js" type="text/javascript"></script>
+    <script src="js/main.js" type="text/javascript"></script>
+  </head>
+  <style>
+    /*Internal CSS*/
+    #time {
+      float: right;
+      font-size: 30px;
+      margin: 10px;
+      font-family: "Cyber";
+      margin-right: 20px;
+      font-weight: bold;
+    }
+    @media only screen and (max-width: 800px) {
+      #greet {
+        visibility: hidden;
+      }
+      #time {
+        margin: auto;
+        visibility: hidden;
+        font-family: "kelly slab";
+      }
+      #pass{
+        margin-left: -110px;
+      }
+    }
+    #greet {
+      padding-top: 10px;
+      font-size: 35px;
+      font-family: "Anders";
+      position: absolute;
+      left: 50%;
+      top: 2%;
+      font-weight: bold;
+    }
+
+    #center {
+      text-align: center;
+      padding: 30px;
+    }
+  </style>
+  <body>
+    <!--Header Section-->
+    <div class="header">
+      <!--Inline css in below line-->
+      <span
+        style="font-size: 40px; cursor: pointer; margin-left: 10px"
+        onclick="openNav()"
+        id="open"
+        >&#9776;
+      </span>
+      <a href="#testimonial"><img src="images/Main_Logo.png" /></a>
+      <span class="greeting" style="margin-left: -90px; color :#273248" id="greet" ></span>
+      <span id="time" style="padding-top: 10px; color:#273248"></span>
+    </div>
+
+    <!--Navigation Section-->
+    <div id="myNav" class="navbar">
+      <a
+        href="javascript:void(0)"
+        class="closebtn"
+        onclick="closeNav()"
+        id="close"
+        >&times;</a
+      >
+      <div class="navbar-content">
+        <a href="#home" id="active">Home</a>
+        <a href="resume.html">Profil</a>
+        <a href="blog.html">Modul</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+
+    <!--Banner Section-->
+    <div class="banner-area" id="home">
+    </div>
+
+    <!--Pembagian Tugas-->
+    <div class="testimonial-area" id="testimonial">
+      <div class="testimonials">
+        <div class="inner">
+          <h1>Pembagian Tugas</h1>
+          <div class="border"></div>
+          <div class="row">
+            <div class="col">
+              <div class="testimonial">
+                <div class="head-testi">
+                  <!-- <img src="images/Candra.JPG" alt="Candra" /> -->
+                  <div class="name-testi">Candra</div>
+                  <div class="subname-testi">
+                    Website <br />Developer
+                  </div>
+                </div>
+                <div class="testi-content">
+                  <p>
+                    Saya adalah dalang dalam pembuatan website ini dan bertanggung jawab dalam pembuatan website ini. 
+                    Saya juga bertanggung jawab dalam pembuatan modul-modul yang ada di website ini. Selain itu sebagian besar ide berasal dari saya.
+                    Untuk hosting website ini, saya menggunakan Github Pages.
+                    <br>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col">
+              <div class="testimonial">
+                <div class="head-testi">
+                  <!-- <img src="images/Candra.JPG" alt="Alex"/> -->
+                  <div class="name-testi">Alex</div>
+                  <div class="subname-testi">Website<br />Support</div>
+                </div>
+                <div class="testi-content">
+                  <p>Saya bertanggung jawab dalam memperbaiki website ini. Saya juga bertanggung jawab dalam memperbaiki modul-modul yang ada di website ini. 
+                    Selain itu saya juga bertanggung jawab dalam memperbaiki ide-ide yang ada di website ini.<br><br><br>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            
+
+            <div class="col">
+              <div class="testimonial">
+                <div class="head-testi">
+                  <!-- <img src="images/Damai.jpeg" alt="Damai" /> -->
+                  <div class="name-testi">Damai</div>
+                  <div class="subname-testi">Website<br />Design</div>
+                </div>
+                <div class="testi-content">
+                  <p>
+                    Saya bertanggung jawab dalam mendesain website ini. Saya juga bertanggung jawab dalam mendesain gambar-gambar pada modul-modul yang ada di website ini. 
+                    <br>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="testimonial">
+                <div class="head-testi">
+                  <!-- <img src="images/Bitha.jpeg" alt="Bitha" /> -->
+                  <div class="name-testi">Bitha</div>
+                  <div class="subname-testi">Website<br />Design</div>
+                </div>
+                <div class="testi-content">
+                  <p>
+                    Saya bertanggung jawab dalam mendesain website ini. Saya juga bertanggung jawab dalam mendesain gambar-gambar pada modul-modul yang ada di website ini. 
+                    <br>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Pembagian Tugas End-->
+
+
+    <!--Kesan Pesan Menu-->
+    <div class="about-area" >
+      <div class="pass-input">
+        <input type="pass-pesan" id="pass-input" placeholder="Masukkan key akses untuk membuka Kesan dan Pesan" title="Type in a name"><br>
+        <button onclick="checkPassword()" id="pass" style="margin-left: 360px;">Submit</button>
+        <br><br><br><br><br><br>
+    </div>
+
+    <div class="pesan-salah" id="keysalah" style="display: none;">Key Akses Salah, Silahkan Menghubungi Developer</div>
+
+      <div class="text-part-abt" id="pesan-candra"  style="display: none;">
+        <h1 style="text-align: center; padding-bottom: -30px">
+          <span style="font-size: 70px;color: #273248; font-family: Baloo Tamma">Kesan dan Pesan</span>
+        </h1>
+        <span class="container">
+          <img src="images/kesandanpesan.jpeg" style="width: 50%; border-radius: 30px; box-shadow:  0 0 10px rgba(5, 0, 5, 5);">
+        </span>
+            <div class="about-area">
+              <div class="about">
+                
+                  <div class="text-about">
+                  Terima kasih Mami Jo untuk satu semester ini. Kami sangat menghargai setiap usaha yang Mami lakukan untuk memastikan kami semua bisa mengerti dan menguasai materi. 
+                  Kami berharap dapat terus belajar dari Mami di kesempatan yang akan datang. 
+                  Sukses selalu, dan semoga Mami diberi kesehatan.
+
+                  </div>
+              </div>
+            </div>
+      </div>
+    </div>
+
+
+    <div class="cta hide" id="goup">
+      <a href="#home"><img src="images/Iconslogo/arrows.png" style="height:30px;width:30px" /></a>
+    </div>
+
+    <!--Copyright Information-->
+    <div class="copyright">
+      <p>
+        &copy; 2024
+        <a href="https://candrawijayaa.github.io/portofolio-candrawijayaa-tailwindcss/">Candra D Wijaya</a>
+      </p>
+    </div>
+    <script>
+      function checkPassword() {
+    var password = document.getElementById('pass-input').value;
+    
+    if (password === "CandraDWijayaToMamiJo2024") {
+      document.getElementById('keysalah').style.display = 'none'; 
+        document.getElementById('pesan-candra').style.display = 'block';  
+        document.querySelector('.pass-input').style.display = 'none';
+        document.getElementById('pass-info').style.display = 'none';
+    } else {
+        document.getElementById('keysalah').style.display = 'block'; 
+    }
+}
+    
+      //handles goup button
+      myID = document.getElementById("goup");
+
+      var myScrollFunc = function () {
+        var y = window.scrollY;
+        if (y >= 800) {
+          myID.className = "cta show";
+        } else {
+          myID.className = "cta hide";
+        }
+      };
+      window.addEventListener("scroll", myScrollFunc);
+
+      //The below line dynamically change the name in banner area.
+      document.getElementById("iden-name").innerHTML = "Candra D Wijaya";
+
+      /*
+                The below code is used to slide/change image infinitely using for loop.
+                A single image will be available only for 2.5s and after that it automatically changes another image
+            */
+      var slideIndex = 0;
+      showSlides();
+      function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("imgrel");
+        var dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+          slideIndex = 1;
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+        setTimeout(showSlides, 2500);
+      }
+
+      //The below is used to make navigation bar sticky
+      //when we scroll up the navigation bar will stick on top of page
+      window.onscroll = function () {
+        stickFunction();
+      };
+      var navbar = document.getElementById("myNav");
+      var sticky = navbar.offsetTop;
+
+      function stickFunction() {
+        if (window.pageYOffset >= sticky) {
+          navbar.classList.add("sticky");
+        } else {
+          navbar.classList.remove("sticky");
+        }
+      }
+    </script>
+  </body>
+</html>
